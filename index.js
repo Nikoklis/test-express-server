@@ -23,13 +23,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/:id", (req, res) => {
-  if (req.params.id == 5) {
-    return res.status(200).send(someData[req.params.id]);
-  }
-
-  if (req.params.id == 6) {
-    return res.status(200).send(someData[req.params.id]);
-  }
   if (someData[req.params.id]) {
     return res.status(200).send(someData[req.params.id]);
   } else {
